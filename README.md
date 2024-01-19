@@ -13,5 +13,6 @@ Score tracking with a time limit.
 # How to Play:
 Use arrow keys to move the fox (left, right, up, down).
 Collect coins to increase your score.
+Be quick! You only have a few seconds to collect coins.
 The game ends after a fixed time, and your final score is displayed.
 Feel free to explore, modify, and contribute!

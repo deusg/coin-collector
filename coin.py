@@ -19,8 +19,8 @@ def draw():
     screen.fill("green")
     fox.draw()
     coin.draw()
-    screen.draw.text("Score: " + str(score), color="black", topleft=(10, 10))
-
+    #screen.draw.text("Score: " + str(score), color="black", topleft=(10, 10))
+    screen.draw.text(f"Score: {score}", color="black", topleft=(10, 10))
     if game_over:
         screen.fill("red")
         screen.draw.text("Final Score: " + str(score),

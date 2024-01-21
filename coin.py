@@ -2,8 +2,8 @@ from random import randint
 import pgzrun
 
 
-WIDTH = 400
-HEIGHT = 400
+WIDTH = 600
+HEIGHT = 600
 
 score = 0
 game_over = False
@@ -22,9 +22,8 @@ def draw():
     #screen.draw.text("Score: " + str(score), color="black", topleft=(10, 10))
     screen.draw.text(f"Score: {score}", color="black", topleft=(10, 10))
     if game_over:
-        screen.fill("red")
-        screen.draw.text("Final Score: " + str(score),
-                         topleft=(10, 10), fontsize=60)
+        screen.fill("pink")
+        screen.draw.text(f"Final Score: {score}", topleft=(10, 10), fontsize=60)
 
 
 def place_coin():
@@ -41,13 +40,13 @@ def update():
     global score
 
     if keyboard.left:
-        fox.x = fox.x - 2
+        fox.x = fox.x - 4
     elif keyboard.right:
-        fox.x = fox.x + 2
+        fox.x = fox.x + 4
     elif keyboard.up:
-        fox.y = fox.y - 2
+        fox.y = fox.y - 4
     elif keyboard.down:
-        fox.y = fox.y + 2
+        fox.y = fox.y + 4
 
     coin_collected = fox.colliderect(coin)
 
@@ -56,6 +55,6 @@ def update():
         place_coin()
 
 
-clock.schedule(time_up, 15.0)
+clock.schedule(time_up, 30.0)
 place_coin()
 pgzrun.go()
